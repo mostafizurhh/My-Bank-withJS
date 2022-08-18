@@ -9,7 +9,12 @@ document.getElementById('depositBtn').addEventListener('click', function () {
     const convertDepositAmount = parseFloat(currentDepositAmountValue);
     // empty deposit amount field
     depositAmountField.value = '';
-    console.log(convertDepositAmount);
+
+    // handle NaN value
+    if (isNaN(convertDepositAmount)) {
+        alert('please enter a number');
+        return;
+    }
 
     // get value from deposit box
     const depositAmount = document.getElementById('deposit');
@@ -20,7 +25,7 @@ document.getElementById('depositBtn').addEventListener('click', function () {
     const totalDepositAmount = convertDepositBoxValue + convertDepositAmount;
     // set new deposit
     depositAmount.innerText = totalDepositAmount;
-    console.log(totalDepositAmount);
+
 
     /*********************************Balance Part******************************/
     // get value from balance
@@ -45,6 +50,12 @@ document.getElementById('withdrawBtn').addEventListener('click', function () {
     const convertWithdrawAmount = parseFloat(currentWithdrawAmountValue);
     // empty withdraw amount field
     withdrawAmountField.value = '';
+
+    // handle NaN value
+    if (isNaN(convertWithdrawAmount)) {
+        alert('please enter a number');
+        return;
+    }
 
     // get value from withdraw box
     const withdrawAmount = document.getElementById('withdraw');
@@ -73,5 +84,4 @@ document.getElementById('withdrawBtn').addEventListener('click', function () {
     const totalBalanceAmount = convertBalanceBoxValue - convertWithdrawAmount;
     // set new balance
     balanceAmount.innerText = totalBalanceAmount;
-    console.log(totalBalanceAmount);
 })
