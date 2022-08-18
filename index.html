@@ -6,10 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Bank with Js and Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+    <header>
+        <h1 class="text-6xl text-center uppercase mt-7"><span class="text-rose-700">Demo of</span> <span
+                class="text-purple-700">My Bank!!!!</span></h1>
+    </header>
+    <main>
+        <section class="bg-orange-300 mt-5 p-5 w-2/3 text-center mx-auto">
+            <h2 class="text-4xl mb-5">Please Login</h2>
+            <div>
+                <input class="block mb-3 w-1/2 mx-auto py-1 px-2" id="userEmail" type="email"
+                    placeholder="Please enter your email">
+                <input class="block w-1/2 mx-auto py-1 px-2" id="userPassword" type="password"
+                    placeholder="Enter your password">
+                <button id="submitBtn"
+                    class="bg-amber-200 hover:bg-violet-500 mt-5 px-5 py-2 rounded-lg text-2xl">Submit</button>
+            </div>
+        </section>
+    </main>
 
+    <script src="homePageStyle.js"></script>
 </body>
 
 </html>
